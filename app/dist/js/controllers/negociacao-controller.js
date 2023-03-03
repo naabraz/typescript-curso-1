@@ -10,6 +10,7 @@ import { MensagemView } from '../views/mensagem-view.js';
 import { NegociacoesView } from '../views/negociacoes-view.js';
 import { DiaDaSemana } from '../enums/dias-da-semana.js';
 import { logarTempoDeExecucao } from '../decorators/logar-tempo-de-execucao.js';
+import { inspect } from '../decorators/inspect.js';
 export class NegociacaoController {
     constructor() {
         this.negociacoes = new Negociacoes();
@@ -47,5 +48,6 @@ export class NegociacaoController {
     }
 }
 __decorate([
+    inspect,
     logarTempoDeExecucao()
 ], NegociacaoController.prototype, "adiciona", null);
